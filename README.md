@@ -1,4 +1,4 @@
-# NetBox Device Type Library
+# Enriched Device Type Library
 
 ## About this Library
 
@@ -8,6 +8,7 @@ discrete physical device type (e.g. make and model).
 
 Some fiels are added, yaml files in stage of enrichment by additional data.
 Definitions below - from original library + additional fields.
+New items marked by *
 
 ## Device Type Definitions
 
@@ -25,16 +26,12 @@ The following fields may optionally be declared:
 - `is_full_depth`: A boolean which indicates whether the device type consumes both the front and rear rack faces.
   (Default: true)
 - `subdevice_role`: Indicates that this is a `parent` or `child` device. (Default: None)
-- 'part_number': An alternative representation of the model number (e.g. a SKU).
-- 'u_height': The height of the device type in rack units. Increments of 0.5U are supported. (Default: 1)
-- 'is_full_depth': A boolean which indicates whether the device type consumes both the front and rear rack faces. (Default: true)
-- 'subdevice_role': Indicates that this is a parent or child device. (Default: None)
-- 'weight': device weight in kg
-- 'MTBF': Mean Time Between Failures – MTBF (hours)
-- 'typical_draw': The device typical power draw, with uplink card and load, but without SFPs, in watts.
-- 'switch_capacity': ASIC bandwidth, Gbps
-- 'fwd_rate': Packet processing rate, mpps
-- 'depth': Device maximum possible (w/power supply) depth, cm
+- 'weight'*: device weight in kg
+- 'MTBF'*: Mean Time Between Failures – MTBF (hours)
+- 'typical_draw'*: The device typical power draw, with uplink card and load, but without SFPs, in watts.
+- 'switch_capacity'*: ASIC bandwidth, Gbps
+- 'fwd_rate'*: Packet processing rate, mpps
+- 'depth'*: Device maximum possible (w/power supply) depth, cm
 
 For further detail on these attributes and those listed below, please reference the
 [schema definitions](schema/).
@@ -51,12 +48,9 @@ to be added.
 - `interfaces`
 - `rear-ports`
 - `front-ports`
-- `module-bays`*
+- `module-bays`
 - `device-bays`
-- `inventory-items`*
-
-
-*Supported on NetBox v3.2 or later.
+- `inventory-items`
 
 The available fields for each type of component are listed below.
 
@@ -93,7 +87,7 @@ The available fields for each type of component are listed below.
 - `name`: Name
 - `label`: Label
 - `type`: Interface type slug (API value)
-- 'poe_type': Typr of PoE standart: {type1-ieee802.3af, type2-ieee802.3at, type3-ieee802.3bt}
+- 'poe_type'*: Typr of PoE standart: {type1-ieee802.3af, type2-ieee802.3at, type3-ieee802.3bt}
 - `mgmt_only`: A boolean which indicates whether this interface is used for management purposes only (default: false)
 
 #### Front Ports
