@@ -2,16 +2,12 @@
 
 ## About this Library
 
-This library is intended to be used for populating device types in [NetBox](https://github.com/netbox-community/netbox).
+This library is enriched copy of Netbox device type library [NetBox](https://github.com/netbox-community/devicetype-library).
 It contains a set of device type definitions expressed in YAML and arranged by manufacturer. Each file represents a
-discrete physical device type (e.g. make and model). These definitions can be loaded into NetBox instead of creating
-new device type definitions manually.
+discrete physical device type (e.g. make and model).
 
-If you would like to contribute to this library, please read through our [contributing guide](CONTRIBUTING.md) before
-submitting content.
-
-If you would like to automate the import of these devicetype template files, there is a **community based** python script
-that will check for duplicates, allow you to selectively import vendors, etc. available here [minitriga/Netbox-Device-Type-Library-Import](https://github.com/minitriga/Netbox-Device-Type-Library-Import). **Note**: This is not related to NetBox in any official way and you will not get support for it here.
+Some fiels are added, yaml files in stage of enrichment by additional data.
+Definitions below - from original library + additional fields.
 
 ## Device Type Definitions
 
@@ -29,6 +25,16 @@ The following fields may optionally be declared:
 - `is_full_depth`: A boolean which indicates whether the device type consumes both the front and rear rack faces.
   (Default: true)
 - `subdevice_role`: Indicates that this is a `parent` or `child` device. (Default: None)
+- 'part_number': An alternative representation of the model number (e.g. a SKU).
+- 'u_height': The height of the device type in rack units. Increments of 0.5U are supported. (Default: 1)
+- 'is_full_depth': A boolean which indicates whether the device type consumes both the front and rear rack faces. (Default: true)
+- 'subdevice_role': Indicates that this is a parent or child device. (Default: None)
+- 'weight': device weight in kg
+- 'MTBF': Mean Time Between Failures – MTBF (hours)
+- 'typical_draw': The device typical power draw, with uplink card and load, but without SFPs, in watts.
+- 'switch_capacity': ASIC bandwidth, Gbps
+- 'fwd_rate': Packet processing rate, mpps
+- 'depth': Device maximum possible (w/power supply) depth, cm
 
 For further detail on these attributes and those listed below, please reference the
 [schema definitions](schema/).
@@ -48,6 +54,7 @@ to be added.
 - `module-bays`*
 - `device-bays`
 - `inventory-items`*
+
 
 *Supported on NetBox v3.2 or later.
 
@@ -86,6 +93,7 @@ The available fields for each type of component are listed below.
 - `name`: Name
 - `label`: Label
 - `type`: Interface type slug (API value)
+- 'poe_type': Typr of PoE standart: {type1-ieee802.3af, type2-ieee802.3at, type3-ieee802.3bt}
 - `mgmt_only`: A boolean which indicates whether this interface is used for management purposes only (default: false)
 
 #### Front Ports
@@ -120,16 +128,3 @@ The available fields for each type of component are listed below.
 - `label`: Label
 - `manufacturer`: The name of the manufacturer which produces this item
 - `part_id`: The part ID assigned by the manufacturer
-
-## Data Validation / Commit Quality Checks
-
-There are two ways this repo focuses on keeping quality device-type definitions:
-
-- Pre-Commit Checks - Optional for helping to identify simple issues before committing. (trailing-whitespace, end-of-file-fixer, check-yaml, yamlfmt, yamllint)
-  - [Install pre-commit](https://pre-commit.com/#install) (`pip install pre-commit`)
-  - To install the pre-commit script `pre-commit install`
-  - To run the pre-commit script on changed files `pre-commit run`
-  - To run the pre-commit script on all files `pre-commit run --all`
-  - To uninstall the pre-commit script `pre-commit uninstall`
-  - Learn more about [pre-commit](https://pre-commit.com/)
-- GitHub Actions - Automatically run before a PR can be merged.  Repeats yamllint & validates against NetBox Device-Type Schema.
