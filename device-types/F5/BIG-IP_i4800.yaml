@@ -5,6 +5,17 @@ slug: big-ip-i4800
 part_number: i4800
 u_height: 1
 is_full_depth: true
+weight: 9.07
+RAM: 32
+ROM: 500
+switch_capacity: 20
+l7rps: 1000000
+l4cps: 450000
+l4http_rps: 2000000
+l4_concurrent: 28000000
+typical_draw: 130
+depth: 57.15
+comments: '[BIG-IP System HARDWARE DATASHEET](https://comptek.ru/materials/f5/big-ip-platforms-datasheet.pdf)'
 console-ports:
   - name: Console
     type: rj-45
@@ -15,10 +26,10 @@ console-ports:
 power-ports:
   - name: psu1
     type: iec-60320-c14
-    maximum_draw: 165
+    maximum_draw: 250
   - name: psu2
     type: iec-60320-c14
-    maximum_draw: 165
+    maximum_draw: 250
 interfaces:
   - name: mgmt
     type: 1000base-t

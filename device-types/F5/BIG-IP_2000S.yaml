@@ -1,35 +1,35 @@
 ---
 manufacturer: F5
-model: BIG-IP 4200v
-slug: big-ip-4200v
-part_number: 4200v
+model: BIG-IP 2000S
+slug: 2000s
+part_number: 'F5-BIG-LTM-2000S'
 u_height: 1
 is_full_depth: true
 weight: 9.1
-RAM: 16
+RAM: 8
 ROM: 500
-switch_capacity: 10
-l7rps: 850000
-l4cps: 300000
-l4http_rps: 2500000
-l4_concurrent: 10000000
-typical_draw: 95
-depth: 57.15
+switch_capacity: 5
+l7rps: 212000
+l4cps: 75000
+l4http_rps: 550000
+l4_concurrent: 5000000
+typical_draw: 74
+depth: 53.34
 comments: '[BIG-IP System HARDWARE DATASHEET](https://comptek.ru/materials/f5/big-ip-platforms-datasheet.pdf)'
 console-ports:
   - name: Console
-    type: rj-45
+    type: de-9
   - name: usb1
     type: usb-a
   - name: usb2
     type: usb-a
   - name: Failover
-    type: rj-45
+    type: de-9
 power-ports:
   - name: psu1
     type: iec-60320-c14
     maximum_draw: 400
-  - name: psu2
+  - name: psu2 (optional)
     type: iec-60320-c14
     maximum_draw: 400
 interfaces:

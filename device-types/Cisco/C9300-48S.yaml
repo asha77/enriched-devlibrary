@@ -8,7 +8,7 @@ weight: 7.86
 MTBF: 281920
 switch_capacity: 256
 fwd_rate: 190.47
-maximum_draw: typical_draw
+typical_draw: 155
 depth: 52.6
 is_full_depth: true
 comments: '[Cisco Catalyst 9300 Series Switches Data Sheet](https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9300-series-switches/nb-06-cat9300-ser-data-sheet-cte-en.html)'

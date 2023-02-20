@@ -1,20 +1,20 @@
 ---
 manufacturer: F5
-model: BIG-IP i5800
-slug: big-ip-i5800
-part_number: i5800
-u_height: 1
+model: BIG-IP 10200V
+slug: big-ip-10200v
+part_number: 10200v
+u_height: 2
 is_full_depth: true
-weight: 9.07
+weight: 19.5
 RAM: 48
-ROM: 480
-switch_capacity: 60
-l7rps: 1800000
-l4cps: 800000
-l4http_rps: 12000000
-l4_concurrent: 40000000
-typical_draw: 265
-depth: 77.72
+ROM: 2x1000 HDD (RAID1)
+switch_capacity: 80
+l7rps: 2000000
+l4cps: 1000000
+l4http_rps: 14000000
+l4_concurrent: 36000000
+typical_draw: 320
+depth: 54.36
 comments: '[BIG-IP System HARDWARE DATASHEET](https://comptek.ru/materials/f5/big-ip-platforms-datasheet.pdf)'
 console-ports:
   - name: Console
@@ -26,10 +26,10 @@ console-ports:
 power-ports:
   - name: psu1
     type: iec-60320-c14
-    maximum_draw: 650
+    maximum_draw: 850
   - name: psu2
     type: iec-60320-c14
-    maximum_draw: 650
+    maximum_draw: 850
 interfaces:
   - name: mgmt
     type: 1000base-t
@@ -42,6 +42,14 @@ interfaces:
     type: 10gbase-x-sfpp
   - name: '1.4'
     type: 10gbase-x-sfpp
+  - name: '1.5'
+    type: 10gbase-x-sfpp
+  - name: '1.6'
+    type: 10gbase-x-sfpp
+  - name: '1.7'
+    type: 10gbase-x-sfpp
+  - name: '1.8'
+    type: 10gbase-x-sfpp
   - name: '2.1'
     type: 10gbase-x-sfpp
   - name: '2.2'
@@ -50,11 +58,15 @@ interfaces:
     type: 10gbase-x-sfpp
   - name: '2.4'
     type: 10gbase-x-sfpp
+  - name: '2.5'
+    type: 10gbase-x-sfpp
+  - name: '2.6'
+    type: 10gbase-x-sfpp
+  - name: '2.7'
+    type: 10gbase-x-sfpp
+  - name: '2.8'
+    type: 10gbase-x-sfpp
   - name: '3.0'
     type: 40gbase-x-qsfpp
   - name: '4.0'
-    type: 40gbase-x-qsfpp
-  - name: '5.0'
-    type: 40gbase-x-qsfpp
-  - name: '6.0'
     type: 40gbase-x-qsfpp

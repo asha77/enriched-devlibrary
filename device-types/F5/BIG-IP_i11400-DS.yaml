@@ -1,21 +1,21 @@
 ---
 manufacturer: F5
-model: BIG-IP i5800
-slug: big-ip-i5800
-part_number: i5800
+model: BIG-IP i11400-DS
+slug: big-ip-i11400-DS
+part_number: i11400-DS
 u_height: 1
 is_full_depth: true
-weight: 9.07
-RAM: 48
-ROM: 480
-switch_capacity: 60
+weight: 16.3
+RAM: 256
+ROM: 2 x 960 SSD
+switch_capacity: 80
 l7rps: 1800000
-l4cps: 800000
-l4http_rps: 12000000
-l4_concurrent: 40000000
-typical_draw: 265
+l4cps: 750000
+l4http_rps: 12500000
+l4_concurrent: 140000000
+typical_draw: 455
 depth: 77.72
-comments: '[BIG-IP System HARDWARE DATASHEET](https://comptek.ru/materials/f5/big-ip-platforms-datasheet.pdf)'
+comments: '[BIG-IP System HARDWARE DATASHEET](https://www.f5.com/pdf/products/big-ip-platforms-datasheet.pdf)'
 console-ports:
   - name: Console
     type: rj-45
@@ -42,14 +42,16 @@ interfaces:
     type: 10gbase-x-sfpp
   - name: '1.4'
     type: 10gbase-x-sfpp
-  - name: '2.1'
+  - name: '1.5'
     type: 10gbase-x-sfpp
-  - name: '2.2'
+  - name: '1.6'
     type: 10gbase-x-sfpp
-  - name: '2.3'
+  - name: '1.7'
     type: 10gbase-x-sfpp
-  - name: '2.4'
+  - name: '1.8'
     type: 10gbase-x-sfpp
+  - name: '2.0'
+    type: 40gbase-x-qsfpp
   - name: '3.0'
     type: 40gbase-x-qsfpp
   - name: '4.0'
@@ -57,4 +59,6 @@ interfaces:
   - name: '5.0'
     type: 40gbase-x-qsfpp
   - name: '6.0'
+    type: 40gbase-x-qsfpp
+  - name: '7.0'
     type: 40gbase-x-qsfpp

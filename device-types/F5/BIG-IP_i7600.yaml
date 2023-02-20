@@ -1,19 +1,19 @@
 ---
 manufacturer: F5
-model: BIG-IP i5800
-slug: big-ip-i5800
-part_number: i5800
+model: BIG-IP i7600
+slug: big-ip-i7600
+part_number: i7600
 u_height: 1
 is_full_depth: true
 weight: 9.07
-RAM: 48
+RAM: 96
 ROM: 480
-switch_capacity: 60
+switch_capacity: 80
 l7rps: 1800000
-l4cps: 800000
-l4http_rps: 12000000
-l4_concurrent: 40000000
-typical_draw: 265
+l4cps: 750000
+l4http_rps: 7000000
+l4_concurrent: 80000000
+typical_draw: 310
 depth: 77.72
 comments: '[BIG-IP System HARDWARE DATASHEET](https://comptek.ru/materials/f5/big-ip-platforms-datasheet.pdf)'
 console-ports:
@@ -49,6 +49,14 @@ interfaces:
   - name: '2.3'
     type: 10gbase-x-sfpp
   - name: '2.4'
+    type: 10gbase-x-sfpp
+  - name: '2.5'
+    type: 10gbase-x-sfpp
+  - name: '2.6'
+    type: 10gbase-x-sfpp
+  - name: '2.7'
+    type: 10gbase-x-sfpp
+  - name: '2.8'
     type: 10gbase-x-sfpp
   - name: '3.0'
     type: 40gbase-x-qsfpp
