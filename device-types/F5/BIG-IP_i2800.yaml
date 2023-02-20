@@ -46,3 +46,9 @@ interfaces:
     type: 10gbase-x-sfpp
   - name: '6.0'
     type: 10gbase-x-sfpp
+childs:
+  - name: PWR-0334-03
+  - name: 18ASF2G72PDZ-2G3B1
+  - name: WD5003ABYZ-011FA0
+  - name: PCA-0416-03
+  

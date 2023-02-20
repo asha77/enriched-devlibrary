@@ -1,0 +1,9 @@
+---
+manufacturer: F5
+model: PWR-0334-03
+part_number: PWR-0334-03
+comments: 'Model num: 150047488'
+power-ports:
+  - name: PSU{module}
+    type: iec-60320-c14
+    maximum_draw: 250

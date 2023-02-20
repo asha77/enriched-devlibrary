@@ -62,3 +62,10 @@ interfaces:
     type: 40gbase-x-qsfpp
   - name: '7.0'
     type: 40gbase-x-qsfpp
+childs:
+  - name: PWR-0306-04
+  - name: PWR-0306-05
+  - name: 36ASF4G72PZ-2G3B1
+  - name: MZ7KM960HMJP-00005
+  - name: CM8066002023801S
+  - name: PCA-0434-01
