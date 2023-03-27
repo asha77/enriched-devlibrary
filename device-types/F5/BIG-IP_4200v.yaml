@@ -56,3 +56,6 @@ interfaces:
     type: 10gbase-x-sfpp
   - name: '2.2'
     type: 10gbase-x-sfpp
+childs:
+  - name: PSA-0017-00
+  - name: FFB0412UHN
